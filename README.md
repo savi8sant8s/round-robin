@@ -2,6 +2,10 @@
 Create a vector of rounds and their respective matches in a tournament, 
 using the Round-robin algorithm.
 
+Accepted:
+-- number of even players;
+-- round-trip;
+ 
 #### Examples with numbers:
 ```
 let rounds1 = round_robin((1..= 4).collect());

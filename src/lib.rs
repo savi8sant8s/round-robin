@@ -2,7 +2,7 @@
 ///Create a vector of rounds and their respective matches in a tournament, 
 ///using the Round-robin algorithm.
 ///
-/// Accepted:
+///Accepted:
 ///-- number of even players;
 ///-- round-trip;
 /// 
