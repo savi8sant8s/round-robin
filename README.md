@@ -3,20 +3,64 @@ Create a vector of rounds and their respective matches in a tournament,
 using the Round-robin algorithm.
 
 <strong>Accepted</strong>:
-- generic data types;
+- String data type players;
 - number of even players;
 - round-trip.
  
-#### Examples with numbers:
+#### Example:
 ```
-let rounds1 = round_robin((1..= 4).collect(), false);
-print!("{:?}", rounds1);
-```
-Output: [[(1,4), (2,3)], [(1,3), (4,2)], [(1,2), (3,4)]] | 
+fn main(){
+    let rounds = round_robin(vec![
+        "Liverpool".to_string(),
+        "Chelsea".to_string(),
+        "M. City".to_string(),
+        "M. United".to_string()
+    ], false);
 
-#### Examples with strings:
+    println!("{:#?}", rounds);
+}
 ```
-let rounds2 = round_robin(vec!["a", "b", "c", "d"], false);
-print!("{:?}", rounds2);
+#### Output:
 ```
-Output: [[("a", "d"), ("b", "c")], [("a", "c"), ("d", "b")], [("a", "b"), ("c", "d")]]
+[
+    Round {
+        id: 1,
+        games: [
+            Game {
+                home: "Liverpool",
+                away: "M. United",
+            },
+            Game {
+                home: "Chelsea",
+                away: "M. City",
+            },
+        ],
+    },
+    Round {
+        id: 2,
+        games: [
+            Game {
+                home: "Liverpool",
+                away: "M. City",
+            },
+            Game {
+                home: "M. United",
+                away: "Chelsea",
+            },
+        ],
+    },
+    Round {
+        id: 3,
+        games: [
+            Game {
+                home: "Liverpool",
+                away: "Chelsea",
+            },
+            Game {
+                home: "M. City",
+                away: "M. United",
+            },
+        ],
+    },
+]
+```
