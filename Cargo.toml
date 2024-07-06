@@ -1,6 +1,6 @@
 [package]
 name = "round_robin"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Savio Santos <saviosa08@gmail.com>"]
 edition = "2018"
 license = "MIT"
